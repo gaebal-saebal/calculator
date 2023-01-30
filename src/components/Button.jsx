@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ButtonDiv = styled.div`
+const ButtonButton = styled.button`
+  all: unset;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: ${(props) => props.flex};
   outline: 1px solid black;
+  border: none;
 
   :hover {
     background-color: #ccc;
@@ -16,8 +18,12 @@ const ButtonDiv = styled.div`
   }
 `;
 
-const Button = ({ children, flex }) => {
-  return <ButtonDiv flex={flex}>{children}</ButtonDiv>;
+const Button = ({ children, name, value, onClick, flex }) => {
+  return (
+    <ButtonButton flex={flex} name={name} value={value} onClick={onClick}>
+      {children}
+    </ButtonButton>
+  );
 };
 
 export default Button;

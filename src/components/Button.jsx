@@ -9,6 +9,7 @@ const ButtonButton = styled.button`
   flex: ${(props) => props.flex};
   outline: 1px solid black;
   border: none;
+  background-color: #eee;
 
   :hover {
     background-color: #ccc;

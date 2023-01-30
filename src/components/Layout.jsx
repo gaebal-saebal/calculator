@@ -16,7 +16,7 @@ const WrapperDiv = styled.div`
   max-width: 393px;
   height: 100vh;
   max-height: 852px;
-  background-color: #ddd;
+  border: 3px solid black;
 `;
 
 const Layout = ({ children }) => {

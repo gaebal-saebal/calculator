@@ -6,7 +6,14 @@ const ButtonDiv = styled.div`
   justify-content: center;
   align-items: center;
   flex: ${(props) => props.flex};
-  border: 1px solid black;
+  outline: 1px solid black;
+
+  :hover {
+    background-color: #ccc;
+  }
+  :active {
+    background-color: #bbb;
+  }
 `;
 
 const Button = ({ children, flex }) => {

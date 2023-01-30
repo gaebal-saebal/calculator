@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Layout, Display } from './components';
 import GlobalStyles from './GlobalStyles';
 import styled from 'styled-components';
@@ -31,11 +31,19 @@ const RightColumnsDiv = styled.div`
 `;
 
 const App = () => {
+  const [displayNum1, setDisplayNum1] = useState(1);
+  const [displaySymbol, setDisplaySymbol] = useState(' + ');
+  const [displayNum2, setDisplayNum2] = useState(2);
+
   return (
     <>
       <GlobalStyles />
       <Layout>
-        <Display>5+5</Display>
+        <Display>
+          {displayNum1}
+          {displaySymbol}
+          {displayNum2}
+        </Display>
         <KeypadDiv>
           <LeftKeysDiv>
             <LeftColumnsDiv>

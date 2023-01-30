@@ -47,6 +47,12 @@ const App = () => {
   const [isNum1Dot, setIsNum1Dot] = useState(false);
   const [isNum2Dot, setIsNum2Dot] = useState(false);
 
+  const getDigit = (num) => {
+    str = num.toString();
+    numDigit = str.length;
+    return numDigit;
+  };
+
   const handleGetResult = (num1, num2, symbol) => {
     switch (symbol) {
       case '+':
@@ -115,15 +121,19 @@ const App = () => {
         setDisplayNum1(result);
         setDisplaySymbol('');
         setDisplayNum2('');
-        setIsNum1Dot(false);
         setIsNum2Dot(false);
+        if (result / Math.pow(10, getDigit(result)) === 0) {
+          setIsNum1Dot(true);
+        } else {
+          setIsNum1Dot(false);
+        }
         break;
       }
       default:
         break;
     }
   };
-  //TODO: 디스플레이 되는 숫자 정상화
+  //TODO: 디스플레이 되는 숫자 정상화, calculate 이후 한발씩 늦는 상태변화 수정 필요
 
   return (
     <>

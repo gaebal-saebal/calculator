@@ -1,17 +1,22 @@
-import React from "react";
-import { Button, Header } from "./components";
+import React from 'react';
+import { Button, Layout, Display } from './components';
+import styled from 'styled-components';
+
+const KeypadDiv = styled.div`
+  height: 70%;
+`;
 
 const App = () => {
   return (
-    <div className="App">
-      <Header>여기는 헤더에용</Header>
-      <main>
+    <Layout>
+      <Display>5+5</Display>
+      <KeypadDiv>
         <Button>버튼1</Button>
         <Button>버튼2</Button>
         <Button>버튼3</Button>
         <Button>버튼4</Button>
-      </main>
-    </div>
+      </KeypadDiv>
+    </Layout>
   );
 };
 

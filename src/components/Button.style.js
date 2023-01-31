@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Button from "./Button";
 
 const MainContainer = styled.div`
   display: flex;
@@ -47,7 +46,7 @@ const InputBar = styled.input`
   border-radius: 10px;
   font-size: 30px;
   border: 2px solid blue;
-  /* padding-right: 20px; */
+  padding-right: 15px;
   &:focus {
     outline: none;
   }

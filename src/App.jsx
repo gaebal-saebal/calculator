@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Layout, Display } from './components';
 import GlobalStyles from './GlobalStyles';
 import styled from 'styled-components';
@@ -48,8 +48,8 @@ const App = () => {
   const [isNum2Dot, setIsNum2Dot] = useState(false);
 
   const getDigit = (num) => {
-    str = num.toString();
-    numDigit = str.length;
+    let str = num.toString();
+    let numDigit = str.length;
     return numDigit;
   };
 
@@ -133,7 +133,8 @@ const App = () => {
         break;
     }
   };
-  //TODO: 디스플레이 되는 숫자 정상화, calculate 이후 한발씩 늦는 상태변화 수정 필요
+  //TODO: 디스플레이 되는 숫자 정상화, calculate 이후 한발씩 늦는 상태변화 수정 필요(useEffect)
+  useEffect(() => {}, []);
 
   return (
     <>

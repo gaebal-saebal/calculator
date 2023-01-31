@@ -8,6 +8,7 @@ const OutputDiv = styled.div`
   height: 30%;
   padding: 30px;
   outline: 1px solid black;
+  background-color: #fff;
 `;
 
 const Display = ({ children }) => {

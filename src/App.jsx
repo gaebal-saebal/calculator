@@ -77,15 +77,19 @@ const App = () => {
     }
   };
 
+  const handleReset = () => {
+    setResult('');
+    setDisplayNum1('0');
+    setDisplaySymbol('');
+    setDisplayNum2('');
+    setIsNum1Dot(false);
+    setIsNum2Dot(false);
+  };
+
   const handleClick = (e) => {
     switch (e.target.name) {
       case 'reset':
-        setResult('');
-        setDisplayNum1('0');
-        setDisplaySymbol('');
-        setDisplayNum2('');
-        setIsNum1Dot(false);
-        setIsNum2Dot(false);
+        handleReset();
         break;
       case 'number':
         if (displaySymbol === '') {

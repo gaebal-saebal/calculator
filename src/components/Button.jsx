@@ -9,7 +9,7 @@ const ButtonButton = styled.button`
   flex: ${(props) => props.flex};
   outline: 1px solid black;
   border: none;
-  background-color: #eee;
+  background: #eee;
 
   :hover {
     background-color: #ccc;
@@ -19,7 +19,7 @@ const ButtonButton = styled.button`
   }
 `;
 
-const Button = ({ children, name, value, onClick, flex }) => {
+const Button = ({ children, flex, name, value, onClick }) => {
   return (
     <ButtonButton flex={flex} name={name} value={value} onClick={onClick}>
       {children}
